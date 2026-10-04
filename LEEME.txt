@@ -1,0 +1,1 @@
+V3 simplificada. Descomprimí el ZIP y abrí index.html en Chrome. No modifica tu web publicada.
