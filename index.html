@@ -3,13 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Lic. Marina Gabriela Piccinin | Psicopedagogía</title>
-<meta name="description" content="Espacio para habitar el aprendizaje. Psicopedagogía para familias, docentes e instituciones.">
+
+<meta name="description" content="Lic. Marina Gabriela Piccinin. Psicopedagogía en Córdoba, Argentina. Acompañamiento a niños, adolescentes, familias, docentes e instituciones.">
 
 <style>
-:root{--cream:#f7f1e8;--paper:#fffdf9;--sage:#56614f;--terra:#b97458;--ink:#30342f;--muted:#6c7069;--line:#e7dbcd}
+
+:root{
+--cream:#f7f1e8;
+--paper:#fffdf9;
+--sage:#56614f;
+--terra:#b97458;
+--ink:#30342f;
+--muted:#6c7069;
+--line:#e7dbcd;
+}
 
 *{box-sizing:border-box}
+
 html{scroll-behavior:smooth}
 
 body{
@@ -17,66 +29,81 @@ margin:0;
 background:var(--paper);
 color:var(--ink);
 font-family:Arial,Helvetica,sans-serif;
-line-height:1.65
+line-height:1.65;
 }
 
 a{text-decoration:none;color:inherit}
 
 h1,h2,h3{
 font-family:Georgia,"Times New Roman",serif;
-font-weight:500
+font-weight:500;
 }
 
-.wrap{width:min(1120px,90%);margin:auto}
+.wrap{
+width:min(1120px,90%);
+margin:auto;
+}
+
+
+/* HEADER */
 
 header{
 position:sticky;
 top:0;
 z-index:20;
-background:rgba(255,253,249,.94);
+background:rgba(255,253,249,.96);
 backdrop-filter:blur(10px);
-border-bottom:1px solid #eee6dc
+border-bottom:1px solid #eee6dc;
 }
 
 nav{
-height:74px;
+min-height:92px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:22px
+gap:22px;
 }
 
 .brand{
 display:flex;
 align-items:center;
-gap:12px
+gap:15px;
 }
 
 /* LOGO */
-.mgp-logo{
-width:58px;
-height:58px;
+
+.logo-img{
+width:72px;
+height:72px;
 object-fit:cover;
 border-radius:50%;
-display:block
+flex-shrink:0;
 }
 
-.brand strong{
-font:500 16px Georgia,serif
+.brand-name{
+display:flex;
+flex-direction:column;
+line-height:1.15;
 }
 
-.brand small{
-display:block;
+.brand-name strong{
+font:500 19px Georgia,"Times New Roman",serif;
+color:var(--ink);
+}
+
+.brand-name small{
+margin-top:7px;
 font-size:9px;
+font-weight:600;
 letter-spacing:.15em;
-color:var(--muted)
+color:var(--sage);
 }
 
 .links{
 display:flex;
 gap:24px;
 align-items:center;
-font-size:14px
+font-size:14px;
 }
 
 .links a:hover{color:var(--terra)}
@@ -89,17 +116,20 @@ padding:13px 22px;
 border-radius:999px;
 background:var(--terra);
 color:#fff;
-font-weight:700
+font-weight:700;
 }
 
 .btn.alt{
 background:transparent;
 color:var(--sage);
-border:1px solid #8a9483
+border:1px solid #8a9483;
 }
 
+
+/* HERO */
+
 .hero{
-background:linear-gradient(120deg,#f5ede3,#fffaf5)
+background:linear-gradient(120deg,#f5ede3,#fffaf5);
 }
 
 .hero-grid{
@@ -108,7 +138,7 @@ display:grid;
 grid-template-columns:1.05fr .95fr;
 gap:65px;
 align-items:center;
-padding:58px 0
+padding:58px 0;
 }
 
 .kicker{
@@ -116,37 +146,53 @@ text-transform:uppercase;
 letter-spacing:.15em;
 font-size:12px;
 font-weight:700;
-color:var(--terra)
+color:var(--terra);
+}
+
+.credentials{
+display:flex;
+flex-wrap:wrap;
+gap:8px 16px;
+margin-top:12px;
+font-size:13px;
+font-weight:600;
+color:var(--sage);
+}
+
+.credentials span{
+display:flex;
+align-items:center;
+gap:6px;
 }
 
 h1{
 font-size:clamp(44px,6vw,72px);
 line-height:1.03;
-margin:12px 0 15px
+margin:14px 0 15px;
 }
 
 .tagline{
 font:500 clamp(24px,2.8vw,34px)/1.3 Georgia,serif;
 color:var(--sage);
-margin:0 0 14px
+margin:0 0 14px;
 }
 
 .intro{
 font-size:18px;
 color:var(--muted);
-max-width:630px
+max-width:630px;
 }
 
 .actions{
 display:flex;
 gap:12px;
 flex-wrap:wrap;
-margin-top:27px
+margin-top:27px;
 }
 
 .photo{
 position:relative;
-text-align:center
+text-align:center;
 }
 
 .photo:before{
@@ -155,7 +201,7 @@ position:absolute;
 inset:10% 0 -4% 14%;
 background:var(--terra);
 opacity:.13;
-border-radius:50% 45% 52% 40%
+border-radius:50% 45% 52% 40%;
 }
 
 .photo img{
@@ -166,146 +212,262 @@ aspect-ratio:4/5;
 object-fit:cover;
 object-position:center 24%;
 border-radius:48% 48% 25px 25px;
-box-shadow:0 22px 55px rgba(60,50,40,.16)
+box-shadow:0 22px 55px rgba(60,50,40,.16);
 }
+
+
+/* GENERAL */
 
 section{padding:88px 0}
 
 .section-head{
-max-width:760px;
-margin-bottom:38px
+max-width:780px;
+margin-bottom:38px;
 }
 
 .section-head h2{
 font-size:clamp(34px,4vw,49px);
 line-height:1.15;
-margin:8px 0 14px
+margin:8px 0 14px;
 }
 
 .section-head p{
 font-size:17px;
-color:var(--muted)
+color:var(--muted);
 }
+
+
+/* SOBRE MI */
 
 .about-grid{
 display:grid;
 grid-template-columns:.8fr 1.2fr;
-gap:65px
+gap:65px;
 }
 
 .quote{
 font:500 29px/1.4 Georgia,serif;
 color:var(--terra);
-margin:0
+margin:0;
 }
 
 .about-copy p{
 font-size:17px;
 color:var(--muted);
-margin-top:0
+margin-top:0;
 }
+
+
+/* SERVICIOS */
 
 .what{
 background:var(--sage);
-color:#fff
+color:#fff;
 }
 
-.what .section-head p{color:#e7ebe5}
+.what .section-head p{
+color:#e7ebe5;
+}
 
 .cards{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:18px
+gap:18px;
 }
 
 .card{
 padding:31px;
 border-radius:23px;
 border:1px solid rgba(255,255,255,.18);
-background:rgba(255,255,255,.07)
+background:rgba(255,255,255,.07);
 }
 
 .card h3{
 font-size:25px;
-margin:0 0 9px
+margin:0 0 9px;
 }
 
 .card p{
 color:#edf0eb;
-margin:0
+margin:0;
 }
 
-.resources{background:var(--cream)}
+.service-detail{
+display:block;
+margin-top:15px;
+font-size:12px;
+letter-spacing:.04em;
+color:#dfe5dc;
+}
+
+
+/* RECURSOS */
+
+.resources{
+background:var(--cream);
+}
 
 .resource-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:48px;
-align-items:center
+gap:55px;
+align-items:center;
 }
 
-.resource-cards{
-display:grid;
-gap:12px
+.resource-intro h2{
+font-size:clamp(34px,4vw,48px);
+line-height:1.15;
+margin:8px 0 18px;
 }
 
-.resource{
+.resource-intro p{
+font-size:17px;
+color:var(--muted);
+}
+
+.resource-note{
 background:var(--paper);
 border:1px solid var(--line);
-padding:20px 22px;
-border-radius:18px;
+padding:32px;
+border-radius:24px;
+}
+
+.resource-note h3{
+font-size:25px;
+color:var(--sage);
+margin:0 0 12px;
+}
+
+.resource-note p{
+color:var(--muted);
+margin:0;
+}
+
+.resource-tags{
 display:flex;
-justify-content:space-between;
-gap:15px;
-align-items:center
+flex-wrap:wrap;
+gap:8px;
+margin-top:20px;
 }
 
-.resource b{
-font-family:Georgia,serif;
-font-size:19px
+.resource-tags span{
+padding:7px 12px;
+border-radius:999px;
+background:var(--cream);
+color:var(--sage);
+font-size:12px;
+font-weight:600;
 }
 
-.soon{
-font-size:11px;
-letter-spacing:.1em;
-text-transform:uppercase;
-color:var(--terra);
-white-space:nowrap
-}
+
+/* CONTACTO */
 
 .contact{
 background:var(--terra);
-color:#fff
+color:#fff;
 }
 
 .contact-grid{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center
+grid-template-columns:1.1fr .9fr;
+gap:70px;
+align-items:center;
 }
 
-.contact p{color:#fff4ee}
+.contact h2{
+font-size:clamp(38px,4vw,52px);
+margin:12px 0 18px;
+}
+
+.contact p{
+color:#fff4ee;
+font-size:17px;
+max-width:600px;
+}
+
+.contact-signature{
+margin-top:30px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,.25);
+}
+
+.contact-signature strong{
+display:block;
+font:500 20px Georgia,serif;
+}
+
+.contact-signature small{
+display:block;
+margin-top:4px;
+color:#ffe9df;
+}
+
+.professional-data{
+margin-top:10px;
+font-size:12px;
+letter-spacing:.05em;
+color:#ffe9df;
+}
 
 .contact-card{
 background:#fff;
 color:var(--ink);
-padding:28px;
-border-radius:24px
+padding:32px;
+border-radius:26px;
+box-shadow:0 18px 40px rgba(85,45,30,.10);
 }
 
-.contact-card a{
+.contact-card > strong{
 display:block;
-padding:14px 0;
-border-bottom:1px solid #eee
+font:500 23px Georgia,serif;
+margin-bottom:12px;
+color:var(--sage);
 }
 
-.contact-card a:last-child{border:0}
-
-.signature{
-margin-top:20px;
-font:500 22px Georgia,serif
+.contact-link{
+display:flex;
+align-items:center;
+gap:14px;
+padding:18px 0;
+border-bottom:1px solid #eee5dc;
 }
+
+.contact-link:last-child{
+border-bottom:0;
+}
+
+.contact-icon{
+width:42px;
+height:42px;
+border-radius:50%;
+background:var(--cream);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+color:var(--terra);
+flex-shrink:0;
+}
+
+.contact-link span{
+display:flex;
+flex-direction:column;
+}
+
+.contact-link small{
+font-size:10px;
+letter-spacing:.12em;
+text-transform:uppercase;
+color:var(--muted);
+}
+
+.contact-link b{
+font-size:15px;
+font-weight:500;
+}
+
+
+/* WHATSAPP */
 
 .wa{
 position:fixed;
@@ -314,82 +476,189 @@ bottom:20px;
 z-index:30;
 background:#365f49;
 color:#fff;
-padding:13px 17px;
+padding:13px 18px;
 border-radius:999px;
 box-shadow:0 8px 28px rgba(0,0,0,.2);
-font-weight:700
+font-weight:700;
 }
+
+
+/* FOOTER */
 
 footer{
 background:#29372d;
 color:#e7ece8;
 padding:25px 0;
-font-size:13px
+font-size:13px;
 }
 
 .foot{
 display:flex;
 justify-content:space-between;
-gap:20px
+gap:20px;
 }
 
+
+/* CELULAR */
+
 @media(max-width:800px){
-.links a:not(.btn){display:none}
-.brand small{display:none}
-.mgp-logo{width:48px;height:48px}
-.hero-grid,.about-grid,.resource-grid,.contact-grid{grid-template-columns:1fr}
-.hero-grid{padding:38px 0 58px;gap:32px}
-.photo{order:-1}
-.photo img{max-width:320px}
-.cards{grid-template-columns:1fr}
-section{padding:62px 0}
-.foot{flex-direction:column}
-.wa{right:13px;bottom:13px}
+
+nav{
+min-height:80px;
 }
+
+.links a:not(.btn){
+display:none;
+}
+
+.logo-img{
+width:58px;
+height:58px;
+}
+
+.brand-name strong{
+font-size:14px;
+}
+
+.brand-name small{
+font-size:7px;
+letter-spacing:.10em;
+}
+
+.hero-grid,
+.about-grid,
+.resource-grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.hero-grid{
+padding:38px 0 58px;
+gap:32px;
+}
+
+.photo{
+order:-1;
+}
+
+.photo img{
+max-width:320px;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+section{
+padding:62px 0;
+}
+
+.foot{
+flex-direction:column;
+}
+
+.wa{
+right:13px;
+bottom:13px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
+
 <header>
+
 <nav class="wrap">
 
 <a class="brand" href="#inicio">
-<img class="mgp-logo" src="mgp-identidad.png" alt="Logo Marina Gabriela Piccinin">
-<span>
-<strong>Marina Gabriela Piccinin</strong>
-<small>LIC. EN PSICOPEDAGOGÍA</small>
-</span>
+
+<img
+class="logo-img"
+src="mgp-identidad.png"
+alt="Identidad profesional Marina Gabriela Piccinin">
+
+<div class="brand-name">
+
+<strong>
+Marina Gabriela Piccinin
+</strong>
+
+<small>
+LIC. EN PSICOPEDAGOGÍA · M.P. 126000
+</small>
+
+</div>
+
 </a>
 
+
 <div class="links">
-<a href="#sobre-mi">Sobre mí</a>
-<a href="#servicios">Servicios</a>
-<a href="#recursos">Recursos</a>
-<a class="btn" href="#contacto">Contacto</a>
+
+<a href="#sobre-mi">
+Sobre mí
+</a>
+
+<a href="#servicios">
+Servicios
+</a>
+
+<a href="#recursos">
+Recursos
+</a>
+
+<a class="btn" href="#contacto">
+Contacto
+</a>
+
 </div>
 
 </nav>
+
 </header>
+
 
 <main>
 
+
 <section class="hero" id="inicio">
+
 <div class="wrap hero-grid">
 
 <div>
-<span class="kicker">Lic. en Psicopedagogía</span>
-<h1>Marina Gabriela<br>Piccinin</h1>
 
-<p class="tagline">Espacio para habitar el aprendizaje.</p>
+<span class="kicker">
+Lic. en Psicopedagogía
+</span>
+
+<div class="credentials">
+<span>M.P. 126000</span>
+<span>·</span>
+<span>Córdoba, Argentina</span>
+</div>
+
+<h1>
+Marina Gabriela<br>
+Piccinin
+</h1>
+
+<p class="tagline">
+Espacio para habitar el aprendizaje.
+</p>
 
 <p class="intro">
 Te muestro cómo la Psicopedagogía está en todos lados: en la escuela, la familia, los vínculos, el juego y la vida cotidiana.
 </p>
 
+
 <div class="actions">
 
-<a class="btn" href="#sobre-mi">Conoceme</a>
+<a class="btn" href="#sobre-mi">
+Conoceme
+</a>
 
 <a class="btn alt"
 href="https://wa.me/5493541520123?text=Hola%20Marina,%20quisiera%20realizar%20una%20consulta."
@@ -398,14 +667,23 @@ Hablemos
 </a>
 
 </div>
+
 </div>
+
 
 <div class="photo">
-<img src="marina-piccinin.png" alt="Lic. Marina Gabriela Piccinin">
+
+<img
+src="marina-piccinin.png"
+alt="Lic. Marina Gabriela Piccinin">
+
 </div>
 
 </div>
+
 </section>
+
+
 
 <section id="sobre-mi">
 
@@ -415,11 +693,16 @@ Hablemos
 “Aprender es un proceso singular. Acompañarlo también.”
 </p>
 
+
 <div class="about-copy">
 
-<span class="kicker">Sobre mí</span>
+<span class="kicker">
+Sobre mí
+</span>
 
-<h2>Soy Marina, Licenciada en Psicopedagogía.</h2>
+<h2>
+Soy Marina, Licenciada en Psicopedagogía.
+</h2>
 
 <p>
 Mi manera de entender la psicopedagogía va más allá de un consultorio o de una dificultad de aprendizaje. Está en la escuela, en la familia, en los vínculos, en el juego y en esas pequeñas situaciones cotidianas en las que aprendemos todo el tiempo.
@@ -430,9 +713,12 @@ Acompaño a niños, adolescentes, familias, docentes e instituciones, buscando c
 </p>
 
 </div>
+
 </div>
 
 </section>
+
+
 
 <section class="what" id="servicios">
 
@@ -449,82 +735,135 @@ Acompañar el aprendizaje también es acompañar sus contextos.
 </h2>
 
 <p>
-Mi trabajo se organiza en tres espacios que se conectan entre sí.
+Trabajo desde una mirada psicopedagógica integral, articulando los espacios clínicos, familiares, educativos e institucionales.
 </p>
 
 </div>
+
 
 <div class="cards">
 
-<article class="card">
-<h3>Para familias</h3>
-<p>
-Acompañamiento psicopedagógico, orientación y herramientas para comprender y sostener los procesos de aprendizaje.
-</p>
-</article>
 
 <article class="card">
-<h3>Para docentes</h3>
+
+<h3>
+Para familias
+</h3>
+
 <p>
-Estrategias, co-visión y recursos para pensar propuestas de enseñanza y acompañar diferentes modos de aprender.
+Evaluación y acompañamiento psicopedagógico de niños y adolescentes, orientación a familias y construcción de estrategias para comprender y sostener los procesos de aprendizaje.
 </p>
+
+<span class="service-detail">
+ACOMPAÑAMIENTO · ORIENTACIÓN · EVALUACIÓN PSICOPEDAGÓGICA
+</span>
+
 </article>
 
+
 <article class="card">
-<h3>Para instituciones</h3>
+
+<h3>
+Para docentes
+</h3>
+
 <p>
-Inclusión, acompañamiento de trayectorias, talleres y articulación entre escuela, familia y profesionales.
+Estrategias, co-visión y recursos para pensar propuestas de enseñanza, abordar dificultades y acompañar diferentes modos de aprender dentro del aula.
 </p>
+
+<span class="service-detail">
+ESTRATEGIAS · INCLUSIÓN · RECURSOS
+</span>
+
 </article>
+
+
+<article class="card">
+
+<h3>
+Para instituciones
+</h3>
+
+<p>
+Acompañamiento de trayectorias escolares, inclusión educativa, orientación a equipos, talleres y articulación entre escuela, familia y profesionales.
+</p>
+
+<span class="service-detail">
+TRAYECTORIAS · TALLERES · ARTICULACIÓN
+</span>
+
+</article>
+
 
 </div>
+
 </div>
 
 </section>
+
+
 
 <section class="resources" id="recursos">
 
 <div class="wrap resource-grid">
 
-<div>
 
-<span class="kicker">Recursos</span>
+<div class="resource-intro">
+
+<span class="kicker">
+Recursos
+</span>
 
 <h2>
 Recursos para acompañar el aprendizaje
 </h2>
 
 <p>
-Estoy construyendo un espacio de materiales y herramientas nacidos de la práctica psicopedagógica, pensados para acompañar situaciones reales de aprendizaje.
+Estoy construyendo un espacio de materiales y herramientas nacidos de la práctica psicopedagógica y pensados para acompañar situaciones reales de aprendizaje.
 </p>
 
 </div>
 
-<div class="resource-cards">
 
-<div class="resource">
-<b>Para familias</b>
-<span class="soon">Próximamente</span>
+<div class="resource-note">
+
+<h3>
+Un espacio que está creciendo
+</h3>
+
+<p>
+Próximamente vas a encontrar acá recursos prácticos, materiales y propuestas para acompañar el aprendizaje desde distintos contextos.
+</p>
+
+<div class="resource-tags">
+
+<span>
+Familias
+</span>
+
+<span>
+Docentes
+</span>
+
+<span>
+Instituciones
+</span>
+
 </div>
 
-<div class="resource">
-<b>Para docentes</b>
-<span class="soon">Próximamente</span>
 </div>
 
-<div class="resource">
-<b>Para instituciones</b>
-<span class="soon">Próximamente</span>
-</div>
 
-</div>
 </div>
 
 </section>
 
+
+
 <section class="contact" id="contacto">
 
 <div class="wrap contact-grid">
+
 
 <div>
 
@@ -532,66 +871,140 @@ Estoy construyendo un espacio de materiales y herramientas nacidos de la prácti
 Contacto
 </span>
 
-<h2>¿Nos encontramos?</h2>
+<h2>
+¿Nos encontramos?
+</h2>
 
 <p>
-Si querés hacer una consulta, conocer mi trabajo o pensar una propuesta para una familia, docente o institución, podés escribirme directamente.
+Si querés hacer una consulta, conocer mi trabajo o pensar una propuesta para una familia, docente o institución, podés escribirme directamente por WhatsApp.
 </p>
 
-<div class="signature">
-MGP · Marina Gabriela Piccinin
+
+<div class="actions">
+
+<a class="btn"
+style="background:#fff;color:#9f5e46"
+href="https://wa.me/5493541520123?text=Hola%20Marina,%20quisiera%20realizar%20una%20consulta."
+target="_blank">
+
+Escribirme por WhatsApp
+
+</a>
+
 </div>
+
+
+<div class="contact-signature">
+
+<strong>
+Lic. Marina Gabriela Piccinin
+</strong>
 
 <small>
 Espacio para habitar el aprendizaje.
 </small>
 
+<div class="professional-data">
+M.P. 126000 · Córdoba, Argentina
 </div>
+
+</div>
+
+</div>
+
+
 
 <div class="contact-card">
 
-<strong>Contacto directo</strong>
+<strong>
+Encontrame también en
+</strong>
 
-<a href="https://wa.me/5493541520123?text=Hola%20Marina,%20quisiera%20realizar%20una%20consulta."
+
+<a class="contact-link"
+href="https://www.instagram.com/marina.piccinin/"
 target="_blank">
-WhatsApp · 3541 520123
+
+<div class="contact-icon">
+◎
+</div>
+
+<span>
+
+<small>
+Instagram
+</small>
+
+<b>
+@marina.piccinin
+</b>
+
+</span>
+
 </a>
 
-<a href="https://www.instagram.com/marina.piccinin/"
-target="_blank">
-Instagram · @marina.piccinin
-</a>
 
-<a href="mailto:marinagpiccinin96@gmail.com">
+
+<a class="contact-link"
+href="mailto:marinagpiccinin96@gmail.com">
+
+<div class="contact-icon">
+✉
+</div>
+
+<span>
+
+<small>
+Email
+</small>
+
+<b>
 marinagpiccinin96@gmail.com
+</b>
+
+</span>
+
 </a>
+
 
 </div>
+
+
 </div>
 
 </section>
 
+
 </main>
+
+
 
 <a class="wa"
 href="https://wa.me/5493541520123?text=Hola%20Marina,%20quisiera%20realizar%20una%20consulta."
 target="_blank">
+
 WhatsApp
+
 </a>
 
+
+
 <footer>
+
 <div class="wrap foot">
 
 <span>
-Lic. Marina Gabriela Piccinin · Psicopedagogía
+Lic. Marina Gabriela Piccinin · M.P. 126000
 </span>
 
 <span>
-Espacio para habitar el aprendizaje.
+Córdoba, Argentina · Espacio para habitar el aprendizaje.
 </span>
 
 </div>
+
 </footer>
+
 
 </body>
 </html>
